@@ -1,0 +1,14 @@
+{
+  "name": "PlayArtifact Price Chrome Extension",
+  "version": "0.0.1",
+  "description": "Shows current market price for each card in PlayArtifact.com",
+  "content_scripts": [
+    {
+      "matches": ["https://*.playartifact.com/*"],
+      "js": ["app.bundle.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "manifest_version": 2
+}
